@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { Producto } from "./components/Producto";
+import { HederPrincipal } from "./components/heder";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header>
+        <HederPrincipal titulo={"TIENDA RAPIDA"} />
+    </header>
+      <main>
+        <section>
+          <Producto
+            nombre={"Gorra"}
+            url={"gorra.jpg"}
+            descripcion={"gorra de sol"}
+            precio={"200"}
+            sku={"123"}
+            unidades={34}
+          />
+          <Producto
+            nombre={"Pantalón"}
+            url={"pantallon.jpg"}
+            descripcion={"Pantalón jean"}
+            precio={"5000"}
+            sku={"1234"}
+            unidades={33}
+          />
+          <Producto
+            nombre={"Remera"}
+            url={"remera.jpg"}
+            descripcion={"Remera lisa"}
+            precio={"2900"}
+            sku={"12345"}
+            unidades={39}
+          />
+          <Producto
+            nombre={"Zapatillas"}
+            url={"zapatillas.jpg"}
+            descripcion={"Zapatillas deportivas"}
+            precio={"12200"}
+            sku={"123456"}
+            unidades={45}
+          />
+        </section>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
